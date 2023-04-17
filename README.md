@@ -2,7 +2,7 @@
 
 ## Movie-Recommendation
 
-Group 1: Spring 2023 Semester
+Group 13: Spring 2023 Semester
 
 ## Members:
 
