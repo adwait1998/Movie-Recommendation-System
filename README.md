@@ -2,13 +2,13 @@
 
 ## Movie-Recommendation
 
-Group 1: Fall 2022 Semester
+Group 1: Spring 2023 Semester
 
 ## Members:
 
-1. Aditi Joshi
-2. Kaushik Hegde
-3. Harshita Verma
-4. Mamatha Juluru
-5. Kavya Bathini
-6. Vishrut Jha
+1. Adwait Patil
+2. Simran Kharpude
+3. Pranav Agarwal
+4. Jaydeep Bhoite
+5. Mukul Rane
+6. Darshan Bhamare
