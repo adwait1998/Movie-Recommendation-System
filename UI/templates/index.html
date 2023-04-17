@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-image: url("https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-color: rgba(255, 255, 255,0.3);
+            background-blend-mode: lighten;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: black;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search {
+            height: 50px;
+            padding: 10px;
+            border-radius: 25px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+
+        .search-btn {
+            display: inline-block;
+            height: 50px;
+            width: 150px;
+            background: #4CAF50;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .search-btn:hover {
+            background: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 60%;
+        }
+
+        .dropdown {
+            height: 50px;
+            padding: 10px;
+            border-radius: 25px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Recommendation System</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Get personalized movie recommendations</h2>
+            <p>Choose between User ID based and Content Based recommendations to find your next favorite movie.</p>
+
+            <form action="/get_recommendations" method="post" role="form">
+                <div class="form-group">
+                    <select class="dropdown" name="recommendation_type" id="recommendation_type">
+                        <option value="user_id">User ID</option>
+                        <option value="content_based">Content Based</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="search" name="input_value" id="input_value" placeholder="Enter User ID or Movie name">
+                    <button class="search-btn" type="submit">Get Recommendations</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

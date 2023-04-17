@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-image: url("https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .column {
+            flex-basis: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Recommendation System</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="column">
+                    <h2>Matrix Factorization</h2>
+                    {% for x in matrix_data %}
+                    {% if x|length %}
+                    <img src="{{ x }}" class="img-fluid" alt="" width="200" height="300">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="column">
+                    <h2>KNN</h2>
+                    {% for x in knn_data %}
+                    {% if x|length %}
+                    <img src="{{ x }}" class="img-fluid" alt="" width="200" height="300">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-image: url("https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: white;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .search {
+            height: 50px;
+            padding: 10px;
+            border-radius: 25px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+
+        .search-btn {
+            display: inline-block;
+            height: 50px;
+            width: 150px;
+            background: #3f51b5;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .search-btn:hover {
+            opacity: 0.8;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Recommendation System</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <p>
+                Welcome to our Movie Recommendation System! Based on your preferences and interests, we provide you with personalized movie recommendations. Just enter your user ID or a movie name, and we'll do the rest!
+            </p>
+
+            <h2>Insert User ID from 1 to 610 to get movie recommendations</h2>
+
+            <form action="/show_recommendation" method="post" role="form">
+                <div class="form-group">
+                    <input type="text" class="search" name="user_id" id="user_id" placeholder="Enter User ID">
+                    <button class="search-btn" type="submit">Get Recommendations</button>
+                </div>
+            </form>
+
+            <h2>Content Based: Enter a movie name to get movie recommendations</h2>
+
+            <form action="/content_based" method="post" role="form">
+                <div class="form-group">
+                    <input type="text" class="search" name="movie_name" id="movie_name" placeholder="Enter Movie name">
+                    <button class="search-btn" type="submit">Get Recommendations</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

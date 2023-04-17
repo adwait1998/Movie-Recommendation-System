@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-image: url("https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: white;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        label {
+            color: white;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 300px;
+            width: 200px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Recommendation System: Content-based Recommendation</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <label>Recommendations based on the movie {{ movie_name }}</label>
+            <ul>
+                {% for movie in movie_list %}
+                <li>
+                    <img src="{{ movie.img_url }}" class="img-fluid" alt="{{ movie.movie_name }}">
+                    <div>{{ movie.movie_name }}</div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
